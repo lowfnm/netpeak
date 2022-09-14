@@ -4,18 +4,26 @@
   "description": "yearly, monthly",
   "keywords": "price",
   "license": "",
-  "author": "",
+  "author": "Artem Melynivskyi",
   "scripts": {
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --public-url /pricing/",
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lowfnm/pricing.git"
+  },
+  "homepage": "https://lowfnm.github.io/pricing/",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "prettier": "2.7.1"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "scss": "^0.2.4"
   }
 }

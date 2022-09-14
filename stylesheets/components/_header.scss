@@ -8,6 +8,10 @@
   align-items: center;
   justify-content: space-between;
 
+  &__burger {
+    cursor: pointer;
+  }
+
   &__logo {
     display: flex;
     align-items: center;
