@@ -9,12 +9,13 @@
 
   &__title {
     font-size: base.$font-size-40;
-    font-weight: base.$regular;
+    font-weight: base.$base-font-weight;
     line-height: base.$line-height-1-5;
     color: colors.$port_gore;
 
     @include breakpoints.max-width-mobile {
       text-align: center;
+      font-size: base.$font-size-39;
     }
   }
 

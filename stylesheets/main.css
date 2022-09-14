@@ -118,6 +118,7 @@ body {
 @media (max-width: 910px) {
   .introduction__title {
     text-align: center;
+    font-size: 39px;
   }
 }
 .introduction__wrapper {
