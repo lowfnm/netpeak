@@ -1,0 +1,100 @@
+@use '../partials/base' as base;
+@use '../modules/colors' as colors;
+@use '../modules/breakpoints' as breakpoints;
+
+.pricing {
+  margin-top: 90px;
+  padding: 40px 45px 40px 68px;
+  background-color: rgba(255, 255, 255, 0.64);
+  border-radius: 26px;
+
+  @include breakpoints.max-width-mobile {
+    padding: 32px 8px 8px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 34px;
+
+    & > li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 232px;
+      height: 387px;
+    }
+
+    @include breakpoints.max-width-mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+
+    & > h3 {
+      font-size: base.$font-size-36;
+      font-weight: base.$bold;
+      line-height: base.$line-height-1-27;
+      color: colors.$port_gore;
+    }
+
+    & > span {
+      font-size: base.$font-size-17;
+      font-weight: base.$medium;
+      line-height: base.$line-height-1-5;
+      color: colors.$waterloo;
+    }
+  }
+
+  &__info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    & > h4 {
+      font-size: base.$font-size-28;
+      font-weight: base.$medium;
+      line-height: base.$line-height-1-5;
+      color: colors.$port_gore;
+    }
+
+    & > p {
+      font-size: base.$font-size-15;
+      font-weight: base.$medium;
+      line-height: base.$line-height-1-5;
+      color: colors.$waterloo;
+    }
+  }
+
+  &__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 14px;
+
+    & > li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      & > p {
+        font-size: base.$font-size-15;
+        font-weight: base.$medium;
+        line-height: base.$line-height-1-5;
+        color: colors.$waterloo;
+      }
+    }
+  }
+
+  &__button {
+    padding: 11px 55px;
+    color: colors.$white;
+    background-color: colors.$port_gore;
+    border-radius: 24px;
+  }
+}

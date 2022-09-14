@@ -1,0 +1,41 @@
+@use '../partials/base' as base;
+@use '../modules/colors' as colors;
+@use '../modules/breakpoints' as breakpoints;
+
+.header {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+      font-size: base.$font-size-18;
+      font-weight: base.$bold;
+      color: colors.$port_gore;
+    }
+  }
+
+  &__button {
+    padding: 10px 30px;
+    font-size: base.$font-size-14;
+    font-weight: base.$medium;
+    color: colors.$white;
+    background-color: colors.$lavender;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s linear background-color;
+
+    &:hover {
+      background-color: colors.$amethyst;
+    }
+
+    @include breakpoints.max-width-mobile {
+      display: none;
+    }
+  }
+}

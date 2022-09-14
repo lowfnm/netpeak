@@ -1,0 +1,27 @@
+@use '../partials/base' as base;
+@use '../modules/breakpoints' as breakpoints;
+
+body {
+  background: linear-gradient(#f5f5fa, #f2dad6);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: base.$page-width;
+}
+
+.main {
+  padding-top: 80px;
+  padding-bottom: 69px;
+
+  @include breakpoints.max-width-mobile {
+    padding-bottom: 64px;
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: base.$container-width;
+  }
+}

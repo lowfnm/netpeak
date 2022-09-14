@@ -1,0 +1,40 @@
+@use '../partials/base' as base;
+@use '../modules/colors' as colors;
+@use '../modules/breakpoints' as breakpoints;
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &__title {
+    font-size: base.$font-size-40;
+    font-weight: base.$regular;
+    line-height: base.$line-height-1-5;
+    color: colors.$port_gore;
+
+    @include breakpoints.max-width-mobile {
+      text-align: center;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoints.max-width-mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 37px;
+    }
+  }
+
+  &__description {
+    max-width: 584px;
+    font-size: base.$font-size-18;
+    font-weight: base.$medium;
+    line-height: base.$line-height-1-5;
+    color: colors.$waterloo;
+  }
+}

@@ -1,0 +1,7 @@
+$tablet: 910px;
+
+@mixin max-width-mobile {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
