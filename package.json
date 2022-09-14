@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "gh-pages": "^4.0.0",
+    "posthtml-include": "^1.7.4",
     "scss": "^0.2.4"
   }
 }

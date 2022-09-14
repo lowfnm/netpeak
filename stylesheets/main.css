@@ -144,6 +144,62 @@ body {
   color: #848199;
 }
 
+.nav {
+  position: relative;
+  width: 220px;
+  height: 44px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.nav__list {
+  display: flex;
+  height: 100%;
+  z-index: 1;
+}
+.nav__item {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.nav__link {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.83px;
+  color: #3b3472;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.nav__link_active {
+  color: #fff;
+}
+.nav__slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.nav__slider-rect {
+  width: 110px;
+  height: 100%;
+  background-color: #bb6bd9;
+  border-radius: 22px;
+  box-shadow: 0 6px 12px rgba(82, 67, 194, 0.16);
+  transition: transform 0.4s;
+}
+
 .pricing {
   margin-top: 90px;
   padding: 40px 45px 40px 68px;
@@ -154,6 +210,9 @@ body {
   .pricing {
     padding: 32px 8px 8px;
   }
+}
+.pricing__title {
+  display: none;
 }
 .pricing__list {
   display: flex;
@@ -235,60 +294,8 @@ body {
   background-color: #a847cc;
 }
 
-.nav {
-  position: relative;
-  width: 220px;
-  height: 44px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.5);
-}
-.nav__list {
-  display: flex;
-  height: 100%;
-  z-index: 1;
-}
-.nav__item {
-  position: relative;
-  flex: 1;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-.nav__link {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.83px;
-  color: #3b3472;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-.nav__link_active {
-  color: #fff;
-}
-.nav__slider {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-.nav__slider-rect {
-  width: 110px;
-  height: 100%;
-  background-color: #bb6bd9;
-  border-radius: 22px;
-  box-shadow: 0 6px 12px rgba(82, 67, 194, 0.16);
-  transition: transform 0.4s;
+.footer {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
