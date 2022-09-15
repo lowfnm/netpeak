@@ -1,10 +1,10 @@
 <section class="pricing">
   <h2 class="pricing__title">Pricing</h2>
   <ul class="reset_list pricing__list">
-    <li>
+    <li class="pricing__item">
       <div>
         <div class="pricing__price">
-          <h3 class="reset_title">$19</h3>
+          <h3 id="starter" class="reset_title">$19</h3>
           <span>/month</span>
         </div>
         <div class="pricing__info">
@@ -43,10 +43,10 @@
       </div>
       <button class="reset_button pricing__button">Choose plan</button>
     </li>
-    <li>
+    <li class="pricing__item">
       <div>
         <div class="pricing__price">
-          <h3 class="reset_title">$36</h3>
+          <h3 id="professional" class="reset_title">$36</h3>
           <span>/month</span>
         </div>
         <div class="pricing__info">
@@ -96,13 +96,16 @@
       </div>
       <button class="reset_button pricing__button">Choose plan</button>
     </li>
-    <li>
+    <li class="pricing__item pricing__item-active">
       <div>
-        <div class="pricing__price">
-          <h3 class="reset_title">$89</h3>
+        <div class="pricing__item_header">
+          <span>MOST POPULAR</span>
+        </div>
+        <div class="pricing__price pricing__price-active">
+          <h3 id="company" class="reset_title">$89</h3>
           <span>/month</span>
         </div>
-        <div class="pricing__info">
+        <div class="pricing__info pricing__info-active">
           <h4 class="reset_title">Company</h4>
           <p class="reset_paragraph">
             Automation plus enterprise-grade features.
@@ -156,7 +159,9 @@
           </li>
         </ul>
       </div>
-      <button class="reset_button pricing__button">Choose plan</button>
+      <button class="reset_button pricing__button pricing__button-active">
+        Choose plan
+      </button>
     </li>
   </ul>
 </section>

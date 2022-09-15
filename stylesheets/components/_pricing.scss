@@ -20,17 +20,45 @@
     display: flex;
     gap: 34px;
 
-    & > li {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      max-width: 232px;
-      height: 387px;
-    }
-
     @include breakpoints.max-width-mobile {
       flex-direction: column;
       align-items: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 232px;
+    height: 387px;
+
+    &-active {
+      margin-top: -75px;
+      padding: 20px 30px;
+      height: 440px;
+      background-color: colors.$port_gore;
+      border-radius: 26px;
+      box-shadow: 0 42px 34px rgba(82, 67, 194, 0.295755);
+
+      @include breakpoints.max-width-mobile {
+        margin-top: 0;
+      }
+    }
+
+    &_header {
+      text-align: right;
+
+      & > span {
+        padding: 7px 17px;
+        font-size: base.$font-size-10;
+        font-weight: base.$extra-bold;
+        line-height: base.$line-height-1-5;
+        letter-spacing: 0.03px;
+        color: colors.$lavender;
+        background-color: colors.$minsk;
+        border-radius: 13.5px;
+      }
     }
   }
 
@@ -52,6 +80,18 @@
       line-height: base.$line-height-1-5;
       color: colors.$waterloo;
     }
+
+    &-active {
+      margin-top: 20px;
+
+      & > h3 {
+        color: colors.$white;
+      }
+
+      & > span {
+        color: colors.$white;
+      }
+    }
   }
 
   &__info {
@@ -72,6 +112,16 @@
       font-weight: base.$medium;
       line-height: base.$line-height-1-5;
       color: colors.$waterloo;
+    }
+
+    &-active {
+      & > h4 {
+        color: colors.$white;
+      }
+
+      & > p {
+        color: colors.$white;
+      }
     }
   }
 
@@ -100,7 +150,12 @@
     color: colors.$white;
     background-color: colors.$port_gore;
     border-radius: 24px;
+    cursor: pointer;
     transition: 0.2s linear background-color;
+
+    &-active {
+      background-color: colors.$lavender;
+    }
 
     &:hover {
       background-color: colors.$amethyst;

@@ -19,6 +19,13 @@
   font-display: fallback;
   src: url("../assets/fonts/poppins/bold.otf") format("opentype");
 }
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  font-display: fallback;
+  src: url("../assets/fonts/poppins/extra-bold.otf") format("opentype");
+}
 .reset_button {
   background: none;
   border: 0;
@@ -218,18 +225,44 @@ body {
   display: flex;
   gap: 34px;
 }
-.pricing__list > li {
+@media (max-width: 910px) {
+  .pricing__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.pricing__item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   max-width: 232px;
   height: 387px;
 }
+.pricing__item-active {
+  margin-top: -75px;
+  padding: 20px 30px;
+  height: 440px;
+  background-color: #231d4f;
+  border-radius: 26px;
+  box-shadow: 0 42px 34px rgba(82, 67, 194, 0.295755);
+}
 @media (max-width: 910px) {
-  .pricing__list {
-    flex-direction: column;
-    align-items: center;
+  .pricing__item-active {
+    margin-top: 0;
   }
+}
+.pricing__item_header {
+  text-align: right;
+}
+.pricing__item_header > span {
+  padding: 7px 17px;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.03px;
+  color: #bb6bd9;
+  background-color: #403879;
+  border-radius: 13.5px;
 }
 .pricing__price {
   display: flex;
@@ -248,6 +281,15 @@ body {
   line-height: 1.5;
   color: #848199;
 }
+.pricing__price-active {
+  margin-top: 20px;
+}
+.pricing__price-active > h3 {
+  color: #fff;
+}
+.pricing__price-active > span {
+  color: #fff;
+}
 .pricing__info {
   margin-top: 20px;
   display: flex;
@@ -265,6 +307,12 @@ body {
   font-weight: 500;
   line-height: 1.5;
   color: #848199;
+}
+.pricing__info-active > h4 {
+  color: #fff;
+}
+.pricing__info-active > p {
+  color: #fff;
 }
 .pricing__benefits {
   display: flex;
@@ -288,7 +336,11 @@ body {
   color: #fff;
   background-color: #231d4f;
   border-radius: 24px;
+  cursor: pointer;
   transition: 0.2s linear background-color;
+}
+.pricing__button-active {
+  background-color: #bb6bd9;
 }
 .pricing__button:hover {
   background-color: #a847cc;
