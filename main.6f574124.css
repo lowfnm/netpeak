@@ -239,7 +239,9 @@ body {
   height: 387px;
 }
 .pricing__item-active {
+  margin-top: -75px;
   padding: 20px 30px;
+  height: 440px;
   background-color: #231d4f;
   border-radius: 26px;
   box-shadow: 0 42px 34px rgba(82, 67, 194, 0.295755);
